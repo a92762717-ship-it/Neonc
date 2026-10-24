@@ -44,7 +44,9 @@
         <activity
             android:name=".MissingStorageActivity"
             android:exported="false" />
-
+       <activity
+            android:name=".ModrinthActivity"
+            android:exported="false" />
         <meta-data
             android:name="android.max_aspect"
             android:value="ratio_float" />
