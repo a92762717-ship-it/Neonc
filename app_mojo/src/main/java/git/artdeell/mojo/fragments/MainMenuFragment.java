@@ -75,9 +75,6 @@ public class MainMenuFragment extends Fragment {
     ))
 );
         mOpenDirectoryButton.setOnClickListener((v)-> openGameDirectory(v.getContext()));
-mModrinthButton.setOnClickListener(v ->
-        Toast.makeText(requireContext(), "Modrinth: кнопка работает", Toast.LENGTH_SHORT).show()
-);
 
         mNewsButton.setOnLongClickListener((v)->{
             Tools.swapFragment(requireActivity(), GamepadMapperFragment.class, GamepadMapperFragment.TAG, null);
