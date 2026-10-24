@@ -54,7 +54,7 @@ public class MainMenuFragment extends Fragment {
         Button mInstallJarButton = view.findViewById(R.id.install_jar_button);
         Button mShareLogsButton = view.findViewById(R.id.share_logs_button);
         Button mOpenDirectoryButton = view.findViewById(R.id.open_files_button);
-
+        Button mModrinthButton = view.findViewById(R.id.modrinth_button);
         ImageButton mEditProfileButton = view.findViewById(R.id.edit_profile_button);
         Button mPlayButton = view.findViewById(R.id.play_button);
         mVersionSpinner = view.findViewById(R.id.mc_version_spinner);
@@ -70,7 +70,9 @@ public class MainMenuFragment extends Fragment {
         mShareLogsButton.setOnClickListener((v) -> shareLog(requireContext()));
 
         mOpenDirectoryButton.setOnClickListener((v)-> openGameDirectory(v.getContext()));
-
+mModrinthButton.setOnClickListener(v ->
+        Toast.makeText(requireContext(), "Modrinth: кнопка работает", Toast.LENGTH_SHORT).show()
+);
 
         mNewsButton.setOnLongClickListener((v)->{
             Tools.swapFragment(requireActivity(), GamepadMapperFragment.class, GamepadMapperFragment.TAG, null);
