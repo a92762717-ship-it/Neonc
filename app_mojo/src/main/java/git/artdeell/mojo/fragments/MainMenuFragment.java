@@ -68,7 +68,12 @@ public class MainMenuFragment extends Fragment {
         mPlayButton.setOnClickListener(v -> ExtraCore.setValue(ExtraConstants.LAUNCH_GAME, true));
 
         mShareLogsButton.setOnClickListener((v) -> shareLog(requireContext()));
-
+        mModrinthButton.setOnClickListener(v ->
+    startActivity(new Intent(
+        requireContext(),
+        git.artdeell.mojo.ModrinthActivity.class
+    ))
+);
         mOpenDirectoryButton.setOnClickListener((v)-> openGameDirectory(v.getContext()));
 mModrinthButton.setOnClickListener(v ->
         Toast.makeText(requireContext(), "Modrinth: кнопка работает", Toast.LENGTH_SHORT).show()
